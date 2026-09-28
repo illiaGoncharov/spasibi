@@ -129,9 +129,26 @@
 		<span class="nav-sep">·</span>
 		<span class="nav-item">спасибо</span>
 		<span class="nav-sep">·</span>
-		<a href="#top" class="nav-link">наверх ↑</a>
+		<a href="#top" class="nav-link" id="to-top" role="button">наверх ↑</a>
 	</nav>
 
+	<script>
+		var toTop = document.getElementById('to-top');
+		if (toTop) {
+			toTop.addEventListener('click', function (e) {
+				e.preventDefault();
+				var topElem = document.getElementById('top');
+				if (topElem && topElem.scrollIntoView) {
+					topElem.scrollIntoView({ behavior: 'smooth', block: 'start' });
+				}
+				try {
+					window.scrollTo({ top: 0, left: 0, behavior: 'smooth' });
+				} catch (err) {
+					window.scrollTo(0, 0);
+				}
+			});
+		}
+	</script>
 </body>
 
 </html>

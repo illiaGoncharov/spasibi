@@ -23,6 +23,7 @@ body {
 .top-header {
   margin-bottom: 2.5em;
   text-align: center;
+  scroll-margin-top: 2em;
 }
 
 .top-logo {
@@ -114,6 +115,9 @@ body {
   color: #111;
   text-decoration: underline;
   text-underline-offset: 3px;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+  touch-action: manipulation;
 }
 
 .nav-link:hover {
